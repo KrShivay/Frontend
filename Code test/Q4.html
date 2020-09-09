@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Question 4
+		<form onSubmit="return formValidate();" id="myForm">
+		<input type = "text" name = "firstname" id="firstname"/>
+		<input type = "checkbox" name = "checkbox" id="checkbox"/>
+		<input type = "submit" name = "submit" id="validate"/>
+		</form>
+		
+		
+		
+		
+</body>
+<script type="text/javascript">
+function formValidate()                                    
+{ 
+    var name = document.forms["myForm"]["firstname"];    
+   var checkbox = document.forms["myForm"]["checkbox"];    
+   
+    if (name.value == "")                                  
+    { 
+        window.alert("Please enter your name."); 
+        name.focus(); 
+        return false; 
+    } 
+    if (checkbox.checked != true)                                  
+    { 
+        window.alert("Please check me."); 
+        checkbox.focus(); 
+        return false; 
+    } 
+	return true;
+}
+</script>
+</html>
+
+

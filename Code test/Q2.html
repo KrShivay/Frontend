@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Question 2
+	Find the maximum consecutive 1's in an array of 0's and 1's.
+
+      
+	 array = [0,1,1,0,0,0,0,0,1,0,1,1,1,0,0,1];
+	  
+	Answer: Do check Console.
+		
+		
+		
+</body>
+<script type="text/javascript">
+const a = [0,1,1,0,0,0,0,0,1,0,1,1,1,0,0,1];
+
+var findMaxConsecutiveOnes = function(nums) {
+    let largestCount = 0;
+    let currentCount = 0;
+    for (let i = 0; i<nums.length; i++) {
+        if (nums[i] === 0) {
+            currentCount = 0;
+        } else {
+            currentCount++;
+        };
+        if (currentCount > largestCount) largestCount = currentCount;
+    };
+    return largestCount;
+};
+
+console.log(findMaxConsecutiveOnes(a));
+</script>
+</html>
+
+
